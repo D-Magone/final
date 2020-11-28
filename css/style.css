@@ -1,0 +1,68 @@
+body {
+   background-image: url("Trianglify3.svg");
+}
+
+.container-none {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0s, opacity 300ms;
+  
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.3s linear 0.3s, opacity 4000ms;
+}
+
+
+.topbar {
+  position: relative;
+  transform: translate3d(0%, 50%, 0px);
+  transition: 3s ease;
+}
+
+
+.topbar-sticky {
+  transform: translate3d(0%, 0%, 0px);
+  transition: 3s ease;
+  opacity: 0.5;
+}
+
+.buttonSlide {
+  font-size: 36px !important;
+}
+
+input {
+  opacity: 0.8;
+  background: none;
+}
+
+table {
+  width: 50% !important;
+  margin: auto;
+  color: antiquewhite;
+}
+
+form {
+  width: 40%;
+  margin: 5px 0 0 0;
+}
+
+#header {
+  text-align: center;
+  margin: auto;
+  padding: 5% 30%;
+  display: block;
+  background-color: transparent;
+  color: antiquewhite;
+  font-family: 'Julius Sans One', sans-serif;
+  text-shadow: 0 0 15px rgba(255,255,255,.3), 0 0 10px rgba(255,255,255,.3), 6px 0px 7px rgba(206,206,206,0.22);
+}
+
+
+
+
