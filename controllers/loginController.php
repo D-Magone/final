@@ -13,9 +13,6 @@ require_once __DIR__ . "/../models/db_wrapper.php";
       if ($response) {
         if (!empty($_POST["password"])) {
           $password = $_POST["password"];
-          // $salt = "#/A5ax%*9)&Hak&ka!@";
-
-          // $password = $password . $salt;
           
           $isValidPassword = password_verify(
             $_POST["password"],
@@ -27,22 +24,30 @@ require_once __DIR__ . "/../models/db_wrapper.php";
             $_SESSION["user_id"] = $response["username"];
             Header("Location: /final/?page=list");
           } else {
-            echo "Invalid password";
+            $error = "Invalid password";
+            $_SESSION["error"] = $error;
           }
         } else {
-          echo "Password User not set";
+          $error = "Password not set";
+          $_SESSION["error"] = $error;
         }
       } else {
-        echo " with username: '$username' does not exist";
+        $error = "'$username' does not exist";
+        $_SESSION["error"] = $error;
       }
     } else {
-      echo "Username no specified";
+    
     }
 
-
+//Create a link to register
+$register = "Create an account";
+$_SESSION["register"] = $register;
 
 $form = new UserForm();
 $form->setBtnText("Login");
+$form->setHeaderText("Login");
 $form->html();
+
+unset($_SESSION["error"]);
 
 ?>

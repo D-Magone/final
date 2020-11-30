@@ -14,10 +14,9 @@
       $_POST["description"],
       $_POST["list_id"],
       $_POST["user_id"],
+      
     );
   }
 
   Header("Location: /final/?page=list");
-
-
 ?>

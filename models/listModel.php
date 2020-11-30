@@ -1,6 +1,6 @@
 <?php
 
-  require_once __DIR__ . "/../models/db_wrapper.php";;
+  require_once __DIR__ . "/../models/db_wrapper.php";
 
   class listModel {
     public function getAll() {

@@ -1,61 +1,19 @@
 body {
-   background-image: url("Trianglify3.svg");
+   background-image: url("Trianglify4.svg"); 
 }
 
-.container-none {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear 0s, opacity 300ms;
-  
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  visibility: visible;
-  opacity: 1;
-  transition: visibility 0.3s linear 0.3s, opacity 4000ms;
-}
-
-
-.topbar {
-  position: relative;
-  transform: translate3d(0%, 50%, 0px);
-  transition: 3s ease;
-}
-
-
-.topbar-sticky {
-  transform: translate3d(0%, 0%, 0px);
-  transition: 3s ease;
-  opacity: 0.5;
-}
-
-.buttonSlide {
-  font-size: 36px !important;
-}
-
-input {
-  opacity: 0.8;
-  background: none;
-}
-
-table {
-  width: 50% !important;
-  margin: auto;
-  color: antiquewhite;
-}
-
-form {
-  width: 40%;
-  margin: 5px 0 0 0;
+.logout {
+  cursor:pointer;
+  color: #000;
+  float: right;
+  width: 100px;
 }
 
 #header {
   text-align: center;
+  font-size: 20px;
   margin: auto;
-  padding: 5% 30%;
+  padding: 5% 20%;
   display: block;
   background-color: transparent;
   color: antiquewhite;
@@ -63,6 +21,165 @@ form {
   text-shadow: 0 0 15px rgba(255,255,255,.3), 0 0 10px rgba(255,255,255,.3), 6px 0px 7px rgba(206,206,206,0.22);
 }
 
+.mainheader {
+  font-size: 40px;
+}
 
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  visibility: visible;
+}
 
+/* Table css */
 
+.table {
+  width: 50% !important;
+  margin: auto;
+  font-size: 14px;
+  color: rgba(255, 246, 235, 0.9);
+  font-family: 'Montserrat', sans-serif;
+  
+}
+
+a:link, a:visited {
+  color: antiquewhite;
+  font-size: 15px;
+  opacity: 0.9;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#sortable {
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  width: 100%; 
+}
+
+#sortable tr {
+  margin: 0 3px 3px 3px;
+  padding: 0.4em;
+  padding-left: 1.5em;
+  height: 18px; 
+}
+
+#sortable tr span {
+  position: absolute;
+  margin-left: -1.3em; 
+}
+
+.table tbody tr:hover td, .table tbody tr:hover td a  {
+  background-color: #eeeeea;
+  color: #000;
+}
+
+input[type=checkbox]:checked + label.strikethrough{
+  text-decoration: line-through;
+  opacity: 0.5;
+  
+}
+
+/* Input and save */
+.form-group {
+  width: 30%;
+  margin: auto;
+}
+
+.form-group input {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+#saveBtn {
+  font-size: 15px;
+  width: 100% !important;
+  margin-top: 10px;
+  margin: auto;
+  background-color: #5e6fa3;
+  border-color: #5e6fa3;
+  cursor:pointer;
+}
+
+/* Login/Signup page css */
+
+.btn {
+ outline:0;
+ border:none;
+ border-top:none;
+ border-bottom:none;
+ border-left:none;
+ border-right:none;
+}
+.btn:focus {
+ outline:0;
+ -webkit-outline:0;
+ -moz-outline:0;
+}
+
+.form-signin {
+  max-width: 280px;
+  padding: 15px;
+  margin: 0 auto;
+  margin-top: 30%;
+}
+
+.form-signin .form-signin-heading, .form-signin {
+  margin-bottom: 10px;
+}
+
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin h1 {
+  color: antiquewhite !important;
+  opacity: 0.8;
+}
+
+.form-signin input {
+  opacity: 0.9;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: none;
+  border-left-style: solid;
+  border-color: #000;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-color: rgb(0,0,0);
+  border-top:1px solid rgba(0,0,0,0.08);
+}
+.form-signin-heading {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 2px rgba(0,0,0,0.5);
+}
+
+.error {
+  font-size: 12px;
+  color: rgb(192, 71, 71);
+}

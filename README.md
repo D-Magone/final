@@ -1,8 +1,12 @@
 Final project
 
+Functioning To do list with Signup and Login
 
 
-SQL table creation:
+
+SQL database creation:
+
+CREATE DATABASE final_project;
 
 CREATE TABLE `user` (
   user_id int(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -11,7 +15,6 @@ CREATE TABLE `user` (
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `username` (`username`)
 )
-
 
 CREATE TABLE `list` (
   list_id int(10) unsigned NOT NULL AUTO_INCREMENT,
